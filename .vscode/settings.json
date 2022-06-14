@@ -1,0 +1,17 @@
+{
+  "workbench.editor.highlightModifiedTabs": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript", "typescript"],
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+        "path": "zsh",
+        "args": [
+            "-i"
+        ]
+    }
+},
+"terminal.integrated.defaultProfile.osx": "zsh",
+"vsicons.presets.nestjs": true,
+}

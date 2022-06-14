@@ -1,0 +1,25 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@node-talks/api/auth": ["libs/api/auth/src/index.ts"],
+      "@node-talks/api/core": ["libs/api/core/src/index.ts"],
+      "@node-talks/app/components": ["libs/app/components/src/index.ts"],
+      "@node-talks/shared": ["libs/shared/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-auth": "libs/api/auth",
+    "api-core": "libs/api/core",
+    "app": "apps/app",
+    "app-components": "libs/app/components",
+    "app-e2e": "apps/app-e2e",
+    "external-api": "apps/external-api",
+    "shared": "libs/shared"
+  }
+}

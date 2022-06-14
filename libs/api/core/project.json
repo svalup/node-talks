@@ -1,0 +1,36 @@
+{
+  "sourceRoot": "libs/api/core/src",
+  "root": "libs/api/core/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api/core/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api/core"],
+      "options": {
+        "jestConfig": "libs/api/core/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "typeorm": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "parallel": false,
+        "commands": [
+          {
+            "command": "ts-node -P ./tsconfig.json -r tsconfig-paths/register ../../../node_modules/typeorm/cli.js --config src/database/database.config.ts",
+            "forwardAllArgs": true
+          }
+        ],
+        "cwd": "libs/api/core",
+        "colors": true
+      }
+    }
+  },
+  "tags": ["scope:server"]
+}

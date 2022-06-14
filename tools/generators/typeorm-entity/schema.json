@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "typeorm-entity",
+  "title": "Typeorm Entity Options Schema",
+  "description": "Typeorm Entity Options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Entity name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "project": {
+      "description": "The project to target.",
+      "type": "string",
+      "$default": {
+        "$source": "projectName"
+      },
+      "alias": "p",
+      "x-prompt": "What project would you like to target?"
+    },
+    "directory": {
+      "description": "Directory where the generated files are placed.",
+      "type": "string",
+      "aliases": ["dir", "path"]
+    }
+  },
+  "required": ["name", "project"]
+}
